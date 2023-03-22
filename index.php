@@ -13,9 +13,17 @@
 
     <div id="app">
         <section>
-            <div class="container">
+            <div class="container py-5">
                 <h1>{{title}}</h1>
 
+            </div>
+
+            <div class="container py-5">
+                <ul class="list-group">
+                    <li class="list-group-item" v-for="todo in todos" :key="todo" >
+                        {{ todo }}
+                    </li>
+                </ul>
             </div>
         </section>
     </div>
