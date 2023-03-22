@@ -1,18 +1,18 @@
 <?php
 
-$todo_string = file_get_contents("./todo.json");
+$todo_list = file_get_contents("./todo.json");
 
 header("Content-Type: application/json");
 
 $todo_list = json_decode($todo_list,true);
 
 $response = [
-    "results" => [],
+    "results" => $todo_list,
     "success" => true,
 ];
 
-echo $todo_string;
+echo json_encode($todo_list);
 
-echo json_encode($response);
+//  echo json_encode($response);
 
 ?>
