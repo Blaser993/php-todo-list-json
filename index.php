@@ -13,7 +13,10 @@
 
     <div id="app">
         <section>
-            <h1>{{title}}</h1>
+            <div class="container">
+                <h1>{{title}}</h1>
+
+            </div>
         </section>
     </div>
 

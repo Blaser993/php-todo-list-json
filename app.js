@@ -3,8 +3,17 @@ const { createApp } = Vue
 createApp({
     data(){
         return{
-            title: "to do list",
+            title: "To-do list",
+            todos: [],
         }
     },
+    methods:{
+        fetchTodoList(){
+            axios.get("./server.php")
+        }
+    },
+    mounted(){
+        this.fetchTodoList()
+    }
 }).mount("#app")
 
